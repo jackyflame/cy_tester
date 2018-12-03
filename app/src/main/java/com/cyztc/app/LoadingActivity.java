@@ -51,8 +51,8 @@ public class LoadingActivity extends BaseActivity {
   public void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_loading_layout);
-    boolean check = SafeUtils.apkVerifyWithCRC(this,getString(R.string.classesdex_crc));
-    if(check){
+    //boolean check = SafeUtils.apkVerifyWithCRC(this,getString(R.string.classesdex_crc));
+    if(true){
       account = SharedpreferencesUtil.readString(this, Constant.SP_USER, Constant.SP_USER_ACCOUNT);
       pwd = SharedpreferencesUtil.readString(this, Constant.SP_USER, Constant.SP_USER_PWD);
       autoLogin =  SharedpreferencesUtil.readBoolean(this, Constant.SP_USER, Constant.SP_USER_AUTOLOGIN,false);
