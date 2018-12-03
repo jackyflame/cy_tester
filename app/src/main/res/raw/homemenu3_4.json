@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "icon_home_class",
+    "name": "课程安排",
+    "isSelected": true
+  },
+  {
+    "icon": "icon_home_contast",
+    "name": "通讯指南",
+    "isSelected": true
+  },
+  {
+    "icon": "icon_home_work",
+    "name": "电子考勤",
+    "isSelected": true
+  }
+]

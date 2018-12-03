@@ -1,0 +1,42 @@
+[
+  {
+    "icon": "icon_ee_circle",
+    "name": "部门动态",
+    "isSelected": true
+  },
+  {
+    "icon": "icon_ee_sign",
+    "name": "员工考勤",
+    "isSelected": true
+  },
+  {
+    "icon": "icon_class_mang",
+    "name": "电子门锁",
+    "isSelected": true
+  },
+  {
+    "icon": "icon_ee_eat",
+    "name": "员工用餐",
+    "isSelected": true
+  },
+  {
+    "icon": "icon_ee_leave",
+    "name": "请假申请",
+    "isSelected": true
+  },
+  {
+    "icon": "icon_ee_travel",
+    "name": "差旅申请",
+    "isSelected": true
+  },
+  {
+    "icon": "icon_ee_car",
+    "name": "派车申请",
+    "isSelected": true
+  },
+  {
+    "icon": "icon_ee_yz",
+    "name": "印章申请",
+    "isSelected": true
+  }
+]

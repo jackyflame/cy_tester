@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/style"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="70px"
+    android:gravity="center"
+    android:text="红色"
+    android:textSize="40px"
+    android:paddingLeft="30px"
+    android:paddingRight="30px"
+    android:layout_marginLeft="20px"
+    android:layout_marginRight="20px"
+    android:layout_marginTop="40px"
+    android:textColor="@color/color_white"
+    android:background="@drawable/gray_item_r"/>

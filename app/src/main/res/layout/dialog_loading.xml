@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="410px"
+        android:layout_height="367px"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/loading_bg_selector">
+        <TextView
+            android:id="@+id/tv_load_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="努力登录中"
+            android:textSize="44px"
+            android:singleLine="true"
+            android:textColor="@color/color_white"/>
+        <ImageView
+            android:id="@+id/iv_loading"
+            android:layout_width="52px"
+            android:layout_height="12px"
+            android:src="@drawable/loading_animal"
+            android:layout_marginTop="36px"/>
+    </LinearLayout>
+</LinearLayout>

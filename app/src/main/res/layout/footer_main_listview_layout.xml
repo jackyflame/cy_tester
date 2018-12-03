@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="130px"
+    android:gravity="center"
+    android:background="@color/color_f6f7ff">
+    <TextView
+        android:id="@+id/tv_load_msg"
+        android:layout_width="match_parent"
+        android:layout_height="130px"
+        android:textSize="40px"
+        android:textColor="@color/color_333542"
+        android:gravity="center"
+        android:text="加载更多"/>
+</LinearLayout>

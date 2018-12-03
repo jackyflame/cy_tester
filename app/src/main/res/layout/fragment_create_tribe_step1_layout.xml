@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="部落名称"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="200px"
+        android:textColor="@color/color_12a7e2"
+        android:textSize="80px"/>
+    <EditText
+        android:id="@+id/et_tribe_name"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:hint="填写部落名称，不超过10个字"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:layout_marginTop="100px"
+        android:maxLength="20"
+        android:singleLine="true"
+        android:paddingLeft="40px"
+        android:paddingRight="40px"
+        android:gravity="center"
+        android:textSize="40px"
+        android:background="@null"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginLeft="40px"
+        android:layout_marginRight="40px"
+        android:background="@color/color_ededed"/>
+</LinearLayout>

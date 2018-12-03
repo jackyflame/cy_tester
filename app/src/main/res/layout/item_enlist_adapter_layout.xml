@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="400px"
+    android:background="@drawable/item_background">
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="250px"
+        android:layout_height="200px"
+        android:layout_margin="40px"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"/>
+    <RelativeLayout
+        android:layout_toRightOf="@id/iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rl_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="40px"
+            android:layout_marginBottom="40px">
+            <TextView
+                android:id="@+id/tv_teacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="老师名称"
+                android:textSize="40px"
+                android:layout_marginRight="40px"
+                android:layout_toLeftOf="@+id/tv_status"
+                android:textColor="@color/color_999999"/>
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未付款"
+                android:textSize="40px"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/color_333333"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_time"
+            android:layout_above="@+id/rl_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20px">
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:textColor="@color/color_999999"
+                android:layout_toLeftOf="@+id/tv_price"
+                android:layout_marginRight="40px"
+                android:text="时间"/>
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="费用"
+                android:textSize="40px"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40px"
+                android:textColor="@color/color_e10000"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_above="@+id/rl_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/color_333333"
+            android:textSize="40px"
+            android:text="名称"
+            android:layout_marginRight="40px"
+            android:layout_marginBottom="20px"
+            android:layout_marginTop="40px"
+            android:maxLines="2"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="40px">-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_time"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="2016-12-01~2017-01-08"/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_status"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:text="未报名"-->
+            <!--android:textColor="@color/color_333333"-->
+            <!--android:textSize="40px"/>-->
+    <!--</RelativeLayout>-->
+    <!--<TextView-->
+        <!--android:id="@+id/tv_scorse"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="课程："-->
+        <!--android:layout_marginLeft="40px"-->
+        <!--android:textColor="@color/color_333333"-->
+        <!--android:textSize="40px"/>-->
+    <!--<TextView-->
+        <!--android:id="@+id/tv_tvmoney"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="费用："-->
+        <!--android:layout_marginTop="40px"-->
+        <!--android:layout_marginLeft="40px"-->
+        <!--android:textColor="@color/color_333333"-->
+        <!--android:textSize="40px"/>-->
+    <!--<TextView-->
+        <!--android:id="@+id/tv_teacher"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="教师："-->
+        <!--android:layout_marginTop="40px"-->
+        <!--android:layout_marginLeft="40px"-->
+        <!--android:textColor="@color/color_333333"-->
+        <!--android:textSize="40px"-->
+        <!--android:layout_marginBottom="40px"/>-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_ededed"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="com.cyztc.app">
+
+  <!--552c9ed1f6b491a79a024a12130ff63d-->
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+  <uses-permission android:name="com.cyztc.app.permission.JPUSH_MESSAGE"/>
+  <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+  <uses-permission android:name="android.permission.VIBRATE"/>
+  <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.GET_TASKS"/>
+  <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+  <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+
+
+  <permission
+    android:name="com.cyztc.app.permission.JPUSH_MESSAGE"
+    android:protectionLevel="signature"/>
+
+
+  <application
+    android:allowBackup="false"
+    android:icon="@mipmap/icon_app"
+    android:label="@string/app_name"
+    android:name=".CyApplication"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme"
+    tools:replace="android:allowBackup"
+    >
+
+    <provider
+      android:authorities="com.pgyersdk.test.fileProvider"
+      android:exported="false"
+      android:grantUriPermissions="true"
+      android:name="android.support.v4.content.FileProvider">
+      <meta-data
+        android:name="android.support.FILE_PROVIDER_PATHS"
+        android:resource="@xml/provider_paths"/>
+    </provider>
+
+    <activity
+      android:exported="false"
+      android:name=".MainActivity"
+      android:screenOrientation="portrait">
+    </activity>
+    <activity
+      android:exported="false"
+      android:name=".views.user.LoginActivity"
+      android:screenOrientation="portrait"/>
+
+    <!--<activity android:name=".views.user.LoginActivity"-->
+    <!--android:screenOrientation="portrait">-->
+    <!--<intent-filter>-->
+    <!--<action android:name="android.intent.action.MAIN" />-->
+
+    <!--<category android:name="android.intent.category.LAUNCHER" />-->
+    <!--</intent-filter>-->
+    <!--</activity>-->
+
+    <activity
+      android:name=".LoadingActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/StartAppTheme">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+
+    <activity
+      android:exported="false"
+      android:name=".views.knowledge.VideoActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:configChanges="orientation|keyboardHidden|screenSize"
+      android:label="@string/app_name"
+      android:name=".views.knowledge.VideoDetailActivity"
+      android:exported="false"
+      android:screenOrientation="portrait">
+      <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.VIEW"/>-->
+        <!--<category android:name="android.intent.category.BROWSABLE"/>-->
+        <!--<data android:mimeType="video/*"/>-->
+        <!--<data android:mimeType="audio/*"/>-->
+        <!--<data android:scheme="http"/>-->
+        <!--<data android:scheme="file"/>-->
+      <!--</intent-filter>-->
+      <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.SEND"/>-->
+        <!--<category android:name="android.intent.category.DEFAULT"/>-->
+        <!--<data android:mimeType="video/*"/>-->
+      <!--</intent-filter>-->
+    </activity>
+    <activity
+      android:exported="false"
+      android:name=".views.knowledge.EbookDetailActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.tribe.TribeActivity"
+      android:screenOrientation="portrait">
+    </activity>
+    <activity
+      android:exported="false"
+      android:name=".views.home.tribe.CreateTribeActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.tribe.TribeDetailActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.tribe.TribeInfoActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.knowledge.BorrowBookActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.MoreItemMenuActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.shop.ShopListActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.shop.GoodsDetailActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.shop.GoodsCartActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.UsedPhoneActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.ServiceInfoActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.grades.TimeTableActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.life.LiveHelerActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.life.RoomServiceActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.PayForActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.life.ApplyRoomActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.ContactActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.TrainLevelActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.StudentDailyTimeActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.tribe.TribeCommentActivity"
+      android:screenOrientation="portrait"
+      android:windowSoftInputMode="adjustPan|stateHidden"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.OpenDoorActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.ContactDetailActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.tribe.TribePublishTopicActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.TrainLevelDetailActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.TrainHistoryActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.MessageActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.MessageDetailActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.CuiYueCircleActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.CuiYueCircleDetailActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.grades.GradesActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.grades.TeacherDetailActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.SigninActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.SigninHistoryActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.life.WashServiceActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.grades.ClassCircleDetailActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.grades.ClassAlbumActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.shop.OrderDetailActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.shop.OrderListActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.DaibiaoKnowActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.DaibiaoNameActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.SeatActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.user.UpdatePwdActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.user.ResetPwdActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.ClassEnlistActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.TrainMainInfoActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.shop.GoodsCartOrderActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.user.SettingActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.user.UpdateUserInfoActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.knowledge.BookListActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.knowledge.BookDetailActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.knowledge.BookCollecActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.tribe.ClassPublishTopicActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.InvestgateListsActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.TrainLevelAnswerActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.shop.SearchGoodsActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.knowledge.NetFileDetailActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.employee.leave.LeaveApplyActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.employee.leave.ListLevaeEmployeeActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.employee.leave.LeaveDetailActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.employee.ChoiceDepartmentActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.employee.leave.SealApplyActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.employee.leave.TravelApplyActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.employee.leave.CarApplyActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.EmSigninActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.EmSigninHistoryActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.employee.EatActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.employee.CarDeployActivity"
+      android:screenOrientation="portrait"/>
+    <activity
+      android:exported="false"
+      android:name=".views.home.tribe.TribeMemberActivity"
+      android:screenOrientation="portrait"/>
+
+
+    <activity
+      android:configChanges="orientation|keyboardHidden|screenSize"
+      android:label="@string/app_name"
+      android:name=".views.knowledge.PlayActivity"
+      android:exported="false"
+      android:screenOrientation="portrait">
+      <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.VIEW"/>-->
+        <!--<category android:name="android.intent.category.BROWSABLE"/>-->
+        <!--<data android:mimeType="video/*"/>-->
+        <!--<data android:mimeType="audio/*"/>-->
+        <!--<data android:scheme="http"/>-->
+        <!--<data android:scheme="file"/>-->
+      <!--</intent-filter>-->
+      <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.SEND"/>-->
+        <!--<category android:name="android.intent.category.DEFAULT"/>-->
+        <!--<data android:mimeType="video/*"/>-->
+      <!--</intent-filter>-->
+    </activity>
+    <activity
+      android:exported="false"
+      android:name="com.karics.library.zxing.android.CaptureActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+    </activity>
+    <!--百度地图-->
+    <meta-data
+      android:name="com.baidu.lbsapi.API_KEY"
+      android:value="UUzYSikyFGbzitCGfW23EUSnUNzLYhgd"/>
+
+    <!-- 微信分享 -->
+    <!--<activity-->
+      <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
+      <!--android:exported="true"-->
+      <!--android:name=".wxapi.WXEntryActivity"-->
+      <!--android:theme="@android:style/Theme.Translucent.NoTitleBar"/>-->
+    <!--<activity-->
+      <!--android:exported="true"-->
+      <!--android:launchMode="singleTop"-->
+      <!--android:name=".wxapi.WXPayEntryActivity">-->
+    <!--</activity>-->
+
+    <!-- alipay sdk begin -->
+
+    <activity
+      android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+      android:exported="false"
+      android:name="com.alipay.sdk.app.H5PayActivity"
+      android:screenOrientation="behind"
+      android:windowSoftInputMode="adjustResize|stateHidden">
+    </activity>
+    <activity
+      android:configChanges="orientation|keyboardHidden|navigation"
+      android:exported="false"
+      android:name="com.alipay.sdk.app.H5AuthActivity"
+      android:screenOrientation="behind"
+      android:windowSoftInputMode="adjustResize|stateHidden">
+    </activity>
+
+    <!-- alipay sdk end -->
+
+    <meta-data
+      android:name="design_width"
+      android:value="1035">
+    </meta-data>
+    <meta-data
+      android:name="design_height"
+      android:value="1840">
+    </meta-data>
+
+    <meta-data
+      android:name="PGYER_APPID"
+      android:value="733f42e3324f1ac9bdde20c7a8b45db4">
+    </meta-data>
+
+
+    <!-- Rich push 核心功能 since 2.0.6-->
+    <activity
+      android:exported="false"
+      android:name="cn.jpush.android.ui.PopWinActivity"
+      android:theme="@style/MyDialogStyle">
+    </activity>
+
+    <!-- Required SDK核心功能-->
+    <activity
+      android:configChanges="orientation|keyboardHidden"
+      android:exported="false"
+      android:name="cn.jpush.android.ui.PushActivity"
+      android:theme="@android:style/Theme.NoTitleBar">
+      <intent-filter>
+        <action android:name="cn.jpush.android.ui.PushActivity"/>
+
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="com.cyztc.app"/>
+      </intent-filter>
+    </activity>
+    <!-- Required  SDK核心功能-->
+    <service
+      android:enabled="true"
+      android:exported="false"
+      android:name="cn.jpush.android.service.DownloadService">
+    </service>
+
+    <!-- Required SDK 核心功能-->
+    <!-- 可配置android:process参数将PushService放在其他进程中 -->
+    <!--<service android:exported="false"-->
+      <!--android:name="cn.jpush.android.service.PushService"-->
+      <!--android:process=":mult">-->
+      <!--<intent-filter>-->
+        <!--<action android:name="cn.jpush.android.intent.REGISTER"/>-->
+        <!--<action android:name="cn.jpush.android.intent.REPORT"/>-->
+        <!--<action android:name="cn.jpush.android.intent.PushService"/>-->
+        <!--<action android:name="cn.jpush.android.intent.PUSH_TIME"/>-->
+      <!--</intent-filter>-->
+    <!--</service>-->
+
+    <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+    <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+    <!--<service-->
+      <!--android:enabled="true"-->
+      <!--android:exported="true"-->
+      <!--android:name="cn.jpush.android.service.DaemonService">-->
+      <!--<intent-filter>-->
+        <!--<action android:name="cn.jpush.android.intent.DaemonService"/>-->
+        <!--<category android:name="com.cyztc.app"/>-->
+      <!--</intent-filter>-->
+
+    <!--</service>-->
+
+    <!-- Required SDK核心功能-->
+    <!--<receiver-->
+      <!--android:enabled="true"-->
+      <!--android:exported="false"-->
+      <!--android:name="cn.jpush.android.service.PushReceiver">-->
+      <!--<intent-filter android:priority="1000">-->
+        <!--<action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>   &lt;!&ndash;Required  显示通知栏 &ndash;&gt;-->
+        <!--<category android:name="com.cyztc.app"/>-->
+      <!--</intent-filter>-->
+      <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.USER_PRESENT"/>-->
+        <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>-->
+      <!--</intent-filter>-->
+      <!--&lt;!&ndash; Optional &ndash;&gt;-->
+      <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.PACKAGE_ADDED"/>-->
+        <!--<action android:name="android.intent.action.PACKAGE_REMOVED"/>-->
+
+        <!--<data android:scheme="package"/>-->
+      <!--</intent-filter>-->
+    <!--</receiver>-->
+
+    <!-- Required SDK核心功能-->
+    <receiver
+      android:exported="false"
+      android:name="cn.jpush.android.service.AlarmReceiver"/>
+
+    <!-- User defined.  For test only  用户自定义的广播接收器-->
+    <receiver
+      android:enabled="true"
+      android:exported="false"
+      android:name=".service.MyReceiver">
+      <intent-filter>
+        <action android:name="cn.jpush.android.intent.REGISTRATION"/> <!--Required  用户注册SDK的intent-->
+        <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/> <!--Required  用户接收SDK消息的intent-->
+        <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/> <!--Required  用户接收SDK通知栏信息的intent-->
+        <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/> <!--Required  用户打开自定义通知栏的intent-->
+        <action android:name="cn.jpush.android.intent.CONNECTION"/><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+        <category android:name="com.cyztc.app"/>
+      </intent-filter>
+    </receiver>
+
+
+    <meta-data
+      android:name="JPUSH_CHANNEL"
+      android:value="developer-default"/>
+    <meta-data
+      android:name="JPUSH_APPKEY"
+      android:value="be37671c60753ceaefe70c0c"/> <!--  </>值来自开发者平台取得的AppKey-->
+
+  </application>
+
+</manifest>

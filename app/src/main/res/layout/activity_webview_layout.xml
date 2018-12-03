@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/include_comm_text_title"/>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:id="@+id/ly_action"
+                android:layout_width="match_parent"
+                android:layout_height="120px"
+                android:orientation="horizontal"
+                android:background="@color/color_white">
+                <TextView
+                    android:id="@+id/tv_pre"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="上一章节"
+                    android:gravity="center"
+                    android:paddingRight="40px"
+                    android:textSize="40px"
+                    android:background="@drawable/item_background"
+                    android:textColor="@color/colorPrimaryDark"/>
+                <TextView
+                    android:id="@+id/tv_next"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="下一章节"
+                    android:gravity="center"
+                    android:paddingRight="40px"
+                    android:textSize="40px"
+                    android:background="@drawable/item_background"
+                    android:textColor="@color/colorPrimaryDark"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

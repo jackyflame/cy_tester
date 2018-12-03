@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="600px"
+        android:background="@mipmap/icon_userinfo_bg"/>
+
+    <com.cyztc.app.widget.RoundImageView
+        android:id="@+id/riv_head"
+        style="@style/CircleHead"
+        android:layout_width="250px"
+        android:layout_height="250px"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/icon_default_head"
+        android:layout_below="@id/iv_bg"
+        android:layout_marginTop="-125px"/>
+
+    <RelativeLayout
+        android:layout_below="@id/riv_head"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="200px"
+        android:layout_marginLeft="150px"
+        android:layout_marginRight="150px">
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称："
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_333333"
+            android:textSize="40px"/>
+        <EditText
+            android:id="@+id/et_nickname"
+            android:layout_toRightOf="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20px"
+            android:singleLine="true"
+            android:maxLength="15"
+            android:hint="称呼"
+            android:textSize="40px"
+            android:textColorHint="@color/color_666666"
+            android:textColor="@color/color_333333"
+            android:background="@null"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_333333"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/include_comm_text_title"/>
+</RelativeLayout>

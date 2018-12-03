@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/include_comm_text_title"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.cyztc.app.widget.refresh.SpringView
+            android:id="@+id/springview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.cyztc.app.widget.refresh.SpringView>
+
+        <TextView
+            android:id="@+id/tv_collect"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:text="收藏"
+            android:textSize="40px"
+            android:textColor="@color/color_white"
+            android:gravity="center"
+            android:background="@drawable/circle_drawable"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="80px"
+            android:layout_marginRight="80px"/>
+
+        <LinearLayout
+            android:id="@+id/ly_loadmsg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible"/>
+
+        <View
+            android:id="@+id/v_bg"
+            android:layout_below="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b1000000"
+            android:clickable="true"/>
+        <ListView
+            android:id="@+id/typelist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white"/>
+    </RelativeLayout>
+</LinearLayout>

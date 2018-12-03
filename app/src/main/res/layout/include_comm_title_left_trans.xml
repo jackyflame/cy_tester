@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ly_trans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/color_12a7e2">
+        <LinearLayout
+            android:id="@+id/ly_system_bar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="123px"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ly_system_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorTransplate">
+
+        <LinearLayout
+            android:id="@+id/ly_system_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="123px"
+            >
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:textColor="@color/color_white"
+                android:layout_centerInParent="true"
+                android:textSize="54px"/>
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:padding="18px"
+                android:src="@mipmap/icon_back_blue"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="32px"
+                android:paddingBottom="32px"
+                android:paddingRight="40px"
+                android:paddingLeft="2px"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="下一步"
+                android:textColor="@color/color_white"
+                android:textSize="45px"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

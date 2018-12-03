@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/include_comm_text_title"/>
+    <RelativeLayout
+        android:id="@+id/rl_driver"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_marginTop="30px"
+        android:background="@drawable/item_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:text="选择司机"
+            android:textColor="@color/color_333333"
+            android:textSize="40px" />
+
+        <ImageView
+            android:id="@+id/iv_driver_more"
+            android:layout_width="55px"
+            android:layout_height="55px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40px"
+            android:src="@mipmap/icon_more" />
+
+        <TextView
+            android:id="@+id/tv_driver_subtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_driver_more"
+            android:hint="请选择司机"
+            android:gravity="right"
+            android:textColor="@color/color_666666"
+            android:textSize="38px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_marginTop="30px"
+        android:background="@drawable/item_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:text="司机电话"
+            android:textColor="@color/color_333333"
+            android:textSize="40px" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="55px"
+            android:layout_height="55px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40px"
+            android:src="@mipmap/icon_more"
+            android:visibility="invisible"/>
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_more"
+            android:hint="请输入司机电话"
+            android:gravity="center"
+            android:background="@null"
+            android:textColor="@color/color_666666"
+            android:textSize="38px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_card"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_marginTop="30px"
+        android:background="@drawable/item_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:text="车牌号码"
+            android:textColor="@color/color_333333"
+            android:textSize="40px" />
+
+        <ImageView
+            android:id="@+id/iv_card_more"
+            android:layout_width="55px"
+            android:layout_height="55px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40px"
+            android:src="@mipmap/icon_more"
+            android:visibility="invisible"/>
+
+        <EditText
+            android:id="@+id/et_card"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/iv_card_more"
+            android:hint="请输入车牌号码"
+            android:gravity="center"
+            android:background="@null"
+            android:textColor="@color/color_666666"
+            android:textSize="38px" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30px"
+        android:background="@color/color_white">
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="300px"
+            android:layout_margin="40px"
+            android:hint="请输入备注信息"
+            android:gravity="top|left"
+            android:textColorHint="@color/color_666666"
+            android:textColor="@color/color_333333"
+            android:textSize="40px"
+            android:background="@null"/>
+    </LinearLayout>
+
+</LinearLayout>

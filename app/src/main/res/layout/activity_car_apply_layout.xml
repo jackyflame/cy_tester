@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ededed">
+    <include
+        layout="@layout/include_comm_text_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_service_type"
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:layout_marginTop="30px"
+                android:background="@drawable/item_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40px"
+                    android:text="车辆类型"
+                    android:textColor="@color/color_333333"
+                    android:textSize="40px" />
+
+                <ImageView
+                    android:id="@+id/iv_more"
+                    android:layout_width="55px"
+                    android:layout_height="55px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="40px"
+                    android:src="@mipmap/icon_more" />
+
+                <TextView
+                    android:id="@+id/tv_subtype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_more"
+                    android:hint="选择车辆类型"
+                    android:gravity="right"
+                    android:textColor="@color/color_666666"
+                    android:textSize="38px" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180px"
+                android:layout_marginTop="30px"
+                android:background="@color/color_white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ly_start_time"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/item_background">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:layout_marginTop="30px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="12px"
+                            android:layout_height="40px"
+                            android:background="@color/color_12a7e2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="28px"
+                            android:text="开始时间"
+                            android:textColor="@color/color_333333"
+                            android:textSize="40px" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_start_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="40px"
+                        android:layout_marginLeft="28px"
+                        android:textColor="@color/color_333333"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="2px"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_ededed" />
+
+                <LinearLayout
+                    android:id="@+id/ly_end_time"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/item_background">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60px"
+                        android:layout_marginTop="30px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="12px"
+                            android:layout_height="40px"
+                            android:background="@color/color_12a7e2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="28px"
+                            android:text="结束时间"
+                            android:textColor="@color/color_333333"
+                            android:textSize="40px"
+                            android:layout_marginRight="40px"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_end_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textSize="40px"
+                        android:layout_marginLeft="40px"
+                        android:textColor="@color/color_333333"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_start"
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:layout_marginTop="30px"
+                android:background="@drawable/item_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40px"
+                    android:text="起点"
+                    android:textColor="@color/color_333333"
+                    android:textSize="40px" />
+
+                <EditText
+                    android:id="@+id/et_start"
+                    android:layout_toRightOf="@id/tv_start"
+                    android:layout_marginLeft="40px"
+                    android:layout_toLeftOf="@+id/iv_add_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:hint="输入起点"
+                    android:paddingRight="20px"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/color_666666"
+                    android:textSize="38px" />
+                <ImageView
+                    android:id="@+id/iv_add_point"
+                    android:layout_width="60px"
+                    android:layout_height="60px"
+                    android:src="@mipmap/icon_add_peo"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="40px"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/ly_points"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+            <RelativeLayout
+                android:id="@+id/rl_end"
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:layout_marginTop="30px"
+                android:background="@drawable/item_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40px"
+                    android:text="终点"
+                    android:textColor="@color/color_333333"
+                    android:textSize="40px" />
+
+                <EditText
+                    android:id="@+id/et_end"
+                    android:layout_toRightOf="@id/tv_end"
+                    android:layout_marginLeft="40px"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:hint="输入终点"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="40px"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/color_666666"
+                    android:textSize="38px" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30px"
+                android:background="@color/color_white">
+                <EditText
+                    android:id="@+id/et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="300px"
+                    android:layout_margin="40px"
+                    android:hint="请填写备注"
+                    android:gravity="top|left"
+                    android:textColorHint="@color/color_666666"
+                    android:textColor="@color/color_333333"
+                    android:textSize="40px"
+                    android:background="@null"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_add_peo"
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/item_background"
+                android:layout_marginTop="30px">
+                <ImageView
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:layout_marginLeft="40px"
+                    android:src="@mipmap/icon_add_peo"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加审批人"
+                    android:textSize="40px"
+                    android:textColor="@color/color_333333"
+                    android:layout_marginLeft="30px"/>
+            </LinearLayout>
+            <com.cyztc.app.widget.CustomListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

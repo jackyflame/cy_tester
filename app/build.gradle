@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'cuiyue'
+            keyPassword 'cy123456'
+            storeFile file('cyztc_android.jks')
+            storePassword 'cy123456'
+        }
+    }
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.cyztc.app"
+        minSdkVersion 14
+        targetSdkVersion 27
+        versionCode 190
+        versionName "1.9.0"
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            buildConfigField "boolean", "IS_DEBUG", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            buildConfigField "boolean", "IS_DEBUG", "true"
+            signingConfig signingConfigs.config
+        }
+    }
+
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    productFlavors {
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "翠月直通车-${variant.buildType.name}-v${defaultConfig.versionName}-${defaultConfig.versionCode}.apk"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'org.xutils:xutils:3.3.36'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.zhy:autolayout:1.4.3'
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    compile 'com.kyleduo.switchbutton:library:1.4.6'
+    testCompile 'junit:junit:4.12'
+    compile project(':photoviewlibrary')
+    compile files('libs/core-3.0.0.jar')
+    compile project(':library')
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile files('libs/pgyer_sdk_2.7.0.jar')
+
+    compile 'pub.devrel:easypermissions:1.1.1'
+    //AndroidUtilCode
+    implementation 'com.blankj:utilcode:1.20.4'
+    //stetho
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    
+}

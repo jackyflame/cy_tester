@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/title"
+        layout="@layout/include_comm_game_text_title"/>
+    <ListView
+        android:id="@+id/listview"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_actions">
+    </ListView>
+    <RelativeLayout
+        android:id="@+id/rl_actions"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_white">
+        <ImageView
+            android:id="@+id/iv_selected"
+            android:layout_width="140px"
+            android:layout_height="140px"
+            android:layout_gravity="center_vertical"
+            android:padding="40px"
+            android:src="@drawable/list_selected_selector"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全选"
+            android:textColor="@color/color_333333"
+            android:textSize="44px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40px"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_ededed"/>
+    </RelativeLayout>
+</RelativeLayout>

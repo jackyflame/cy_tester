@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140px"
+    android:background="@drawable/item_background">
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="220px"
+        android:layout_height="wrap_content"
+        android:text="12月12日"
+        android:textSize="40px"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40px"
+        android:textColor="@color/color_333333"/>
+
+    <TextView
+        android:id="@+id/tv_week"
+        android:layout_toRightOf="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="40px"
+        android:textSize="40px"
+        android:layout_centerVertical="true"
+        android:textColor="@color/color_333333"/>
+    <ImageView
+        android:layout_width="40px"
+        android:layout_height="40px"
+        android:src="@mipmap/icon_more"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40px"/>
+</RelativeLayout>

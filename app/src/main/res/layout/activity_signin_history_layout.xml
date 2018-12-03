@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.cyztc.app.widget.refresh.SpringView
+        android:id="@+id/springview"
+        android:layout_below="@id/rl_actions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"/>
+    </com.cyztc.app.widget.refresh.SpringView>
+    <LinearLayout
+        android:id="@+id/ly_loadmsg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/rl_actions"
+        android:background="@color/color_ededed"/>
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/include_comm_text_title" />
+    <RelativeLayout
+        android:id="@+id/rl_actions"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="@color/color_white">
+
+        <TextView
+            android:id="@+id/tv_month"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:text="12月"
+            android:textColor="@color/color_333333"
+            android:gravity="center"
+            android:textSize="40px"/>
+
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:padding="20px"
+            android:layout_marginRight="20px"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_back_blue_right"/>
+
+        <ImageView
+            android:id="@+id/iv_pre"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:padding="20px"
+            android:layout_marginLeft="20px"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_back_blue"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_ededed"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</RelativeLayout>
