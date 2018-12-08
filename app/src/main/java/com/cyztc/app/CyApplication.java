@@ -158,14 +158,24 @@ public class CyApplication extends Application {
   }
 
   public boolean isStudent() {
-    return true;
-//    if (userBean != null) {
+    if (userBean != null) {
 //      if (TextUtils.isEmpty(userBean.getTrainingInfoId()) && TextUtils.isEmpty(
 //          userBean.getTrainingInfoName())) {
 //        return false;
 //      }
-//      return true;
-//    }
-//    return false;
+      return true;
+    }
+    return false;
+  }
+
+  public boolean isStudentForLogin() {
+    if (userBean != null) {
+      if (TextUtils.isEmpty(userBean.getTrainingInfoId()) && TextUtils.isEmpty(
+              userBean.getTrainingInfoName())) {
+        return false;
+      }
+      return true;
+    }
+    return false;
   }
 }

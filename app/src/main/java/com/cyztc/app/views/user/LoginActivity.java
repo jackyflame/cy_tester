@@ -263,7 +263,7 @@ public class LoginActivity extends BaseActivity implements EasyPermissions.Permi
                 SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,
                     Constant.SP_USER_LOGIN_DATA, result);
                 CyApplication.getInstance().setUserBean(data);
-                if (CyApplication.getInstance().isStudent()) {
+                if (CyApplication.getInstance().isStudentForLogin()) {
                   getTranningInfos();
                 } else {
                   MainActivity.staticActivity(LoginActivity.this);

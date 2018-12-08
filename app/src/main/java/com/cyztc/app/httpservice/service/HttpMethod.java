@@ -38,17 +38,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class HttpMethod {
 
-//  private static final String HTTP_PROTOCOL = "https://";
-//  public static final String IP = "192.168.89.2";
-//  public static final String PORT = ":8443";
-//  public static final String PORT_IMG = ":8443";
-//  public static final String HTTP_PROTOCOL_IMG = "http://";
-
   private static final String HTTP_PROTOCOL = "https://";
-  public static final String IP = "39.104.229.38";
+  public static final String IP = "192.168.89.2";
   public static final String PORT = ":8443";
-  public static final String PORT_IMG = ":3700";
+  public static final String PORT_IMG = ":8443";
   public static final String HTTP_PROTOCOL_IMG = "http://";
+
+//  private static final String HTTP_PROTOCOL = "https://";
+//  public static final String IP = "39.104.229.38";
+//  public static final String PORT = ":8443";
+//  public static final String PORT_IMG = ":3700";
+//  public static final String HTTP_PROTOCOL_IMG = "http://";
 
 //  private static final String HTTP_PROTOCOL = "https://";
 //  public static final String IP = "94.191.22.124";
