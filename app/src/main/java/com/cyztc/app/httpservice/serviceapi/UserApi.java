@@ -77,14 +77,13 @@ public class UserApi extends BaseApi {
   public void updatePwd(String accountId, String password, String newPass,
       HttpSubscriber<BaseBean> subscriber) {
     if (userService != null) {
-      //JsonObject jsonObject = new JsonObject();
-      //jsonObject.addProperty("accountId", accountId);
-      //jsonObject.addProperty("oldPass", password);
-      //jsonObject.addProperty("newPass", newPass);
-      //String data = RSAUtils.encryptRSA(jsonObject.toString());
+      JsonObject jsonObject = new JsonObject();
+      jsonObject.addProperty("accountId", accountId);
+      jsonObject.addProperty("oldPass", password);
+      jsonObject.addProperty("newPass", newPass);
+      String data = RSAUtils.encryptRSA(jsonObject.toString());
       Observable observable =
-          userService.updatePwd(RSAUtils.encryptRSA(accountId), RSAUtils.encryptRSA(password),
-              RSAUtils.encryptRSA(newPass))
+          userService.updatePwd(data)
               .map(new HttpResultFunc<BaseBean>());
       toSubscribe(observable, subscriber);
     }

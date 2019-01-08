@@ -50,8 +50,9 @@ public interface UserService {
    * @returnF
    */
   @POST("rePassword.do")
-  Observable<HttpResult<BaseBean>> updatePwd(@Query("accountId") String accountId,
-      @Query("oldPass") String password, @Query("newPass") String newPass);
+  Observable<HttpResult<BaseBean>> updatePwd(@Query("jsonData") String jsonData);
+//  Observable<HttpResult<BaseBean>> updatePwd(@Query("accountId") String accountId,
+//      @Query("oldPass") String password, @Query("newPass") String newPass);
 
   /**
    * 重置密码
