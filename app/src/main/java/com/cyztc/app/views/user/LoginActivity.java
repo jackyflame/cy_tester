@@ -87,16 +87,13 @@ public class LoginActivity extends BaseActivity implements EasyPermissions.Permi
     EventBus.getDefault().register(this);
     setContentView(R.layout.activity_login_layout);
     setTitle("登录");
-    autoLogin =
-        SharedpreferencesUtil.readBoolean(this, Constant.SP_USER, Constant.SP_USER_AUTOLOGIN,
-            false);
-    isempe =
-        SharedpreferencesUtil.readBoolean(this, Constant.SP_USER, Constant.SP_USER_RMEMP, false);
-    isrmpwd =
-        SharedpreferencesUtil.readBoolean(this, Constant.SP_USER, Constant.SP_USER_RMPWD, false);
-    String account =
-        SharedpreferencesUtil.readString(this, Constant.SP_USER, Constant.SP_USER_ACCOUNT);
+    autoLogin = SharedpreferencesUtil.readBoolean(this, Constant.SP_USER, Constant.SP_USER_AUTOLOGIN,false);
+    isempe = SharedpreferencesUtil.readBoolean(this, Constant.SP_USER, Constant.SP_USER_RMEMP, false);
+    isrmpwd = SharedpreferencesUtil.readBoolean(this, Constant.SP_USER, Constant.SP_USER_RMPWD, false);
+    String account = SharedpreferencesUtil.readString(this, Constant.SP_USER, Constant.SP_USER_ACCOUNT);
+    account = RSAUtils.decryptRSA(account);
     String pwd = SharedpreferencesUtil.readString(this, Constant.SP_USER, Constant.SP_USER_PWD);
+    pwd = RSAUtils.decryptRSA(pwd);
     if (autoLogin)//自动登录
     {
       btnAutoLogin.setChecked(true);
@@ -224,44 +221,32 @@ public class LoginActivity extends BaseActivity implements EasyPermissions.Permi
                     });
                 SPUtils.getInstance().put(Const.SP_ACCOUNT_ID, data.getAccountId());
                 SPUtils.getInstance().put(Const.SP_TOKEN, data.getToken());
-                SPUtils.getInstance()
-                    .put(Const.SP_TOKEN_ENCRYPT, RSAUtils.encryptRSA(data.getToken()));
+                SPUtils.getInstance().put(Const.SP_TOKEN_ENCRYPT, RSAUtils.encryptRSA(data.getToken()));
                 if (btnAutoLogin.isChecked())//自动登录
                 {
-                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,
-                      Constant.SP_USER_AUTOLOGIN, true);
-                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,
-                      Constant.SP_USER_ACCOUNT, account);
-                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,
-                      Constant.SP_USER_PWD, pwd);
+                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,Constant.SP_USER_AUTOLOGIN, true);
+                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,Constant.SP_USER_ACCOUNT, RSAUtils.encryptRSA(account));
+                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,Constant.SP_USER_PWD, RSAUtils.encryptRSA(pwd));
                 } else {
-                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,
-                      Constant.SP_USER_AUTOLOGIN, false);
+                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,Constant.SP_USER_AUTOLOGIN, false);
                 }
                 if (btnEmpe.isChecked()) {
-                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,
-                      Constant.SP_USER_RMEMP, true);
+                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,Constant.SP_USER_RMEMP, true);
                 } else {
-                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,
-                      Constant.SP_USER_RMEMP, false);
+                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,Constant.SP_USER_RMEMP, false);
                 }
                 if (btnRmPwd.isChecked()) {
-                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,
-                      Constant.SP_USER_ACCOUNT, account);
-                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,
-                      Constant.SP_USER_PWD, pwd);
-                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,
-                      Constant.SP_USER_RMPWD, true);
+                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,Constant.SP_USER_ACCOUNT, RSAUtils.encryptRSA(account));
+                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,Constant.SP_USER_PWD, RSAUtils.encryptRSA(pwd));
+                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,Constant.SP_USER_RMPWD, true);
                 } else {
-                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,
-                      Constant.SP_USER_RMPWD, false);
+                  SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,Constant.SP_USER_RMPWD, false);
                 }
                 //                SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER, Constant.SP_USER_ACCOUNT, account);
                 //                SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER, Constant.SP_USER_PWD, pwd);
                 //                SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER, Constant.SP_USER_REMEMBERPWD, isRememberPwd);
                 //                SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER, Constant.SP_USER_STUDENTLOGIN, isStudentLogin);
-                SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,
-                    Constant.SP_USER_LOGIN_DATA, result);
+                SharedpreferencesUtil.write(LoginActivity.this, Constant.SP_USER,Constant.SP_USER_LOGIN_DATA, content);
                 CyApplication.getInstance().setUserBean(data);
                 if (CyApplication.getInstance().isStudentForLogin()) {
                   getTranningInfos();

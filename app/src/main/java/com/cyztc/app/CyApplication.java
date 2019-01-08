@@ -15,6 +15,7 @@ import com.cyztc.app.bean.UserBean;
 import com.cyztc.app.constant.Const;
 import com.cyztc.app.constant.Constant;
 import com.cyztc.app.utils.CommonUtil;
+import com.cyztc.app.utils.RSAUtils;
 import com.cyztc.app.utils.SharedpreferencesUtil;
 import com.cyztc.app.views.user.LoginActivity;
 import com.facebook.stetho.Stetho;
@@ -87,10 +88,9 @@ public class CyApplication extends Application {
     if (userBean != null) {
       return userBean;
     } else {
-      String userdata =
-          SharedpreferencesUtil.readString(this, Constant.SP_USER, Constant.SP_USER_LOGIN_DATA);
+      String userdata = SharedpreferencesUtil.readString(this, Constant.SP_USER, Constant.SP_USER_LOGIN_DATA);
       Gson gson = new Gson();
-      userBean = gson.fromJson(userdata, UserBean.class);
+      userBean = gson.fromJson(RSAUtils.decryptRSA(userdata), UserBean.class);
       return userBean;
     }
   }
